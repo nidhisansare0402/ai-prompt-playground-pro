@@ -8,8 +8,11 @@ def generate_response(prompt: str) -> str:
     """
     Send user prompt to the Gemini API and return the generated response.
     """
-    response = client.models.generate_content(
-        model = MODEL_NAME,
-        contents = prompt
-    )
-    return response.text
+    try:
+        response = client.models.generate_content(
+            model = MODEL_NAME,
+            contents = prompt
+        )
+        return response.text    
+    except Exception as e:
+        raise RuntimeError(f"Gemini API Error: {e}")
