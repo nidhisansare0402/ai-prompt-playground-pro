@@ -1,11 +1,8 @@
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
 
-# Read the Gemini API key
+load_dotenv() 
+
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-
-# Default model for the application
-MODEL_NAME = "gemini-2.0-flash"
+MODEL_NAME = os.getenv("MODEL_NAME", "gemini-2.0-flash")

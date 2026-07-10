@@ -31,15 +31,20 @@ Solution:
 - Removed the secret from Git history
 - Added `.env` to `.gitignore`
 
+Lesson: Never commit secrets.
+
 ---
 
 ### 2. Deprecated Gemini Model
 
 Problem:
 `gemini-2.5-flash` returned 404.
+The model endpoint had changed.
 
 Solution:
 Investigated available models and updated the configuration.
+
+Lesson: Verify external dependencies rather than assuming.
 
 ---
 
@@ -52,6 +57,7 @@ Root Cause:
 Google AI Studio Free Tier quota.
 
 Solution:
+I isolated the issue
 Verified the application wasn't the issue by:
 - Listing models
 - Testing minimal API calls
@@ -60,6 +66,8 @@ Verified the application wasn't the issue by:
 
 Conclusion:
 The limitation was external.
+
+Lesson: Not every error is caused by your code.
 
 ---
 
@@ -70,6 +78,8 @@ LLMs may not always return perfectly formatted JSON.
 
 Solution:
 Added a dedicated response parser and response cleaning.
+
+Lesson: AI outputs need validation and processing before applications rely on them.
 
 ---
 
