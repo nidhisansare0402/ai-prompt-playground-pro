@@ -1,0 +1,9 @@
+1. Why haven't you used databases to story history in your project?
+2. What changs an Interviewer can ask me to do infront of them during on going interview?
+3. As we save the prompt and response this is nothing different than chatgpt as it also saves the chat history
+4. How you implemented you project from where did you get this idea? Why this project only?
+5. As of now we are using one LLM model why would we use multiple model later
+6. Why you use json to store history?
+7. why history.json should contain a JSON array (list)?
+8. Why are we using pathlib in history_service.py?
+9. Why did you use Path(__file__).parent.parent instead of "data/history.json"?
