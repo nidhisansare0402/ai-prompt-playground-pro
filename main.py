@@ -2,6 +2,8 @@ from services.gemini_service import generate_response
 from app.prompt_builder import build_prompt
 from app.response_parser import parse_response
 import json
+from config.settings import MODEL_NAME
+from services.history_service import HistoryService
 
 def get_response_format():
     """
@@ -29,11 +31,14 @@ def main():
     print("AI Prompt Playground Pro")
     print("=" * 50)
 
+    history_service = HistoryService()
+
     user_prompt = input("Enter your prompt: ")
     response_format = get_response_format()
 
     # Build the final prompt based on user input and desired response format
     final_prompt = build_prompt(user_prompt, response_format)
+
 
     print("Generating response...")
 
@@ -54,6 +59,19 @@ def main():
         else:
             print(parsed_response)
 
+        record = {
+        "user_prompt": user_prompt,
+        "enhanced_prompt": final_prompt,
+        "output_format": response_format,
+        "model": MODEL_NAME,
+        "response": parsed_response
+        }
+
+        try:
+            history_service.save_history(record)
+        except Exception as e:
+            print(f"Failed to save history: {e}")
+
     except RuntimeError as e:
         print("\n" + "=" * 50)
         print("Gemini API Error")
@@ -69,6 +87,8 @@ def main():
     except Exception as e:
         print("\nUnexpected Error")
         print(e)
+
+    
 
 if __name__ == "__main__":
     main()
