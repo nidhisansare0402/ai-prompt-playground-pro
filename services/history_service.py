@@ -1,6 +1,7 @@
 import json
 # Locate files reliably
 from pathlib import Path
+from datetime import datetime
 
 class HistoryService:
     # HistoryService learns where history.json is located and provides methods to read and write to it.
@@ -25,9 +26,42 @@ class HistoryService:
             return []
     
     def save_history(self, record):
-        # Load history from json file append new record and overwrite the file back to json file
-        history = self.load_history()
-        history.append(record)
+        # Save a new history record.
+        # Validate required fields
+        required_fields = [
+            "user_prompt",
+            "enhanced_prompt",
+            "output_format",
+            "model",
+            "response"
+        ]
 
+        for field in required_fields:
+            if field not in record:
+                raise ValueError(f"Missing required field: {field}")
+            
+        # Load existing history
+        history = self.load_history()
+
+        # Generate next ID
+        if history:
+            next_id = len(history) + 1
+        else:
+            next_id = 1
+        
+        # Create a new history record
+        history_record = {
+            "id": next_id,
+            "timestamp": datetime.now().isoformat(),
+            "user_prompt": record["user_prompt"],
+            "enhanced_prompt": record["enhanced_prompt"],
+            "output_format": record["output_format"],
+            "model": record["model"],
+            "response": record["response"]
+    }
+        # Add the new record
+        history.append(history_record)
+
+        # Save the updated history
         with self.history_file.open("w", encoding= "utf-8") as file:
             json.dump(history, file, indent= 4, ensure_ascii=False)
