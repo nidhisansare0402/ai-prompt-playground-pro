@@ -25,7 +25,10 @@ def get_response_format():
         "2": "markdown",
         "3": "json"
     }
-    return formats.get(choice)
+    if choice in formats:
+        return formats[choice]
+
+    print("Invalid choice. Please try again.")
 
 def process_prompt(user_prompt):
     """
