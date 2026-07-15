@@ -64,6 +64,9 @@ class TemplateService:
             if template["id"] != template_id:
                 updated_templates.append(template)
 
+        if len(updated_templates) == len(templates):
+            return False
+
         with open(self.template_file, "w", encoding="utf-8") as file:
             json.dump(
                 updated_templates,
