@@ -8,3 +8,4 @@
 8. Why are we using pathlib in history_service.py?
 9. Why did you use Path(__file__).parent.parent instead of "data/history.json"?
 10. Why return [] in exception handling for json.load()
+11. why we made the classes for history and template?

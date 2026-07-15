@@ -4,7 +4,7 @@ from app.response_parser import parse_response
 import json
 from config.settings import MODEL_NAME
 from services.history_service import HistoryService
-
+from services.template_service import TemplateService
 
 def get_response_format():
     """
