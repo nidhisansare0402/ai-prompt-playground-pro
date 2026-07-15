@@ -32,13 +32,20 @@ ai-prompt-playground-pro/
 │   └── response_parser.py
 │
 ├── services/
-│   └── gemini_service.py
+│   ├── gemini_service.py
+│   ├── history_service.py
+│   └── template_service.py
 │
 ├── config/
 │   └── settings.py
 │
+├── data/
+│   ├── history.json
+│   └── templates.json
+│
 ├── main.py
 ├── requirements.txt
+├── .env
 └── README.md
 ```
 
