@@ -5,6 +5,7 @@ import json
 from config.settings import MODEL_NAME
 from services.history_service import HistoryService
 
+
 def get_response_format():
     """
     Display the available response formats and return the selected option.
