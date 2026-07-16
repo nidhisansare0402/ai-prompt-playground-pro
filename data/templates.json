@@ -1,1 +1,12 @@
-[]
+[
+    {
+        "id": 2,
+        "name": "SQL",
+        "prompt": "Act as senior data analyst.\nExplain SQL Joins.\nGive 2 examples."
+    },
+    {
+        "id": 3,
+        "name": "Python",
+        "prompt": "Explain python dictionaries."
+    }
+]
