@@ -18,3 +18,5 @@ organize and reuse AI prompts using Google's Gemini API." acoording to this line
 17. why template deletion bug happend why can't we use Name for deletion?
 18. If needed how would you improve this project? Are you planning to add more features?
 19.What concepts does this project cover?
+20. Why Gemini model and not other?
+21. Is there any application that like this? What makes you project different?
