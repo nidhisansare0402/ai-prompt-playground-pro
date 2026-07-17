@@ -305,7 +305,7 @@ AI Processor
 
 # Sidebar Configuration
 st.sidebar.image(
-    "assets/logo.png",
+    "images/logo.png",
     width=450
 )
 menu = st.sidebar.radio(
