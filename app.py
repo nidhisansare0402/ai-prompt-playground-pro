@@ -304,6 +304,10 @@ AI Processor
     st.success("Built as part of an Agentic AI learning journey.")
 
 # Sidebar Configuration
+st.sidebar.image(
+    "assets/logo.png",
+    width=450
+)
 menu = st.sidebar.radio(
     "Navigation",
     [

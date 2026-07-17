@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.png" alt="AI Prompt Playground Pro Logo" width="250" height="250">
+  <img src="images/logo.png" alt="AI Prompt Playground Pro Logo" width="250" height="250">
 </p>
 
 <h1 align="center">AI Prompt Playground Pro</h1>
@@ -217,21 +217,21 @@ streamlit run app.py
 
 * Generate
 
-![alt text](image.png)
+![Generate Page](images/generate.png)
 
 * Templates
 
-![alt text](image-1.png)
-![alt text](image-2.png)
+![Templates Page 1](images/templates_1.png)
+![Templates Page 2](images/templates_2.png)
 
 * History
 
-![alt text](image-3.png)
+![History Page](images/history.png)
 
 * About
 
-![alt text](image-4.png)
-![alt text](image-5.png)
+![About Page 1](images/about_1.png)
+![About Page 2](images/about_2.png)
 
 ---
 
