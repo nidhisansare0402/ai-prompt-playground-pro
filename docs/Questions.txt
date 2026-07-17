@@ -9,3 +9,12 @@
 9. Why did you use Path(__file__).parent.parent instead of "data/history.json"?
 10. Why return [] in exception handling for json.load()
 11. why we made the classes for history and template?
+12. Difference between gemini_service.py and ai_processor.py file?
+13. Why Streamlit reruns the script on every interaction?
+!4. What practical questions can be asked to interviewers. Like what chnages he can ask me to do in front of him?
+15. What if i delete the record from history.json file directly will it show in the history page?
+16. "AI Prompt Playground Pro is a Prompt Engineering application that helps developers create, test, 
+organize and reuse AI prompts using Google's Gemini API." acoording to this line how does it help in testing and organizing prompts?
+17. why template deletion bug happend why can't we use Name for deletion?
+18. If needed how would you improve this project? Are you planning to add more features?
+19.What concepts does this project cover?
