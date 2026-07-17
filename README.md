@@ -1,12 +1,8 @@
 <p align="center">
-  <img src="assets/logo.png" alt="AI Prompt Playground Pro Logo" width="180"/>
+  <img src="assets/logo.png" alt="AI Prompt Playground Pro Logo" width="250" height="250">
 </p>
 
 <h1 align="center">AI Prompt Playground Pro</h1>
-
-<p align="center">
-An AI-powered Prompt Engineering Playground built with Python, Streamlit, and Google's Gemini API.
-</p>
 
 AI Prompt Playground Pro is an AI-powered web application built using **Python**, **Streamlit**, and **Google Gemini API**. It allows users to create, test, manage, and reuse AI prompts through an intuitive interface while demonstrating clean software architecture and prompt engineering concepts.
 
